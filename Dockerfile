@@ -14,4 +14,4 @@ RUN set -xe \
 
 VOLUME /data
 
-ENTRYPOINT ["/root/natapp > /data/natinfo.txt"]
+ENTRYPOINT ["/root/natapp > /root/natinfo.txt"]
