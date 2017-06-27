@@ -12,6 +12,4 @@ RUN set -xe \
     && chmod +x natapp \
     && rm ${VERSION}.zip
 
-VOLUME /data
-
 ENTRYPOINT ["/root/natapp"]
