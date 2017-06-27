@@ -12,4 +12,9 @@ RUN set -xe \
     && chmod +x natapp \
     && rm ${VERSION}.zip
 
-ENTRYPOINT ["/root/natapp"]
+RUN set -xe \
+    && apk add --no-cache mailutils
+
+VOLUME /data
+
+ENTRYPOINT ["/root/natapp > /data/natinfo.txt"]
